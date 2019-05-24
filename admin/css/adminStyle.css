@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-align: center;
+	list-style: none;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+}
+html {
+	position: relative;
+	min-height: 100%;
+	margin: 0 auto;
+}
+#restrictArea{
+	background: #660909
+}
+#restrictArea h2{
+	color: #ff6347;
+	padding: 6px 0;
+    font-size: 1.3rem;
+}
+#errorBox{
+    background: #ff6347;
+	display: none;
+}
+#successDelete{
+	background: #479cff;
+	color: #fff;
+	display: none;
+}
+#successBox{
+    background: #33ef00;
+	display: none;
+}
+.editBtn{
+	color: #007efc;
+	margin-bottom: 20px;
+}
+.deleteBtn{
+	color: #ff0000;
+}
+
+a#addMoreImg{
+	display: inline-block;
+	margin-top: 30px;
+	transition: all 0.2s ease;
+	width: 100%;
+	text-align: left;
+}
+a#addMoreImg:active{
+	color: #333;
+}
+/* ---------------------------header style ---------------------------*/
+header{
+    position: relative;
+	width: 100%;
+	height: 70px;
+}
+.logo{
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 15%;
+    left: 20px;
+    top: 0;
+    background-image: url("../../assets/logo.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    text-indent: -99999999px;
+}
+.logo a{
+    display: block;
+    height: 100%;
+}
+nav#dashboardNav>ul{
+	display: inline-block;
+	width: 100%;
+}
+nav#dashboardNav{
+    display: block;
+	position: relative;
+    background: #212121;
+}
+nav#dashboardNav>ul>li:last-child a{
+    background: #f00;
+    border-radius: 4px;
+}
+nav#dashboardNav>ul>li:last-child a:hover{
+    background: #ff2700;
+}
+nav#dashboardNav>ul>li{
+	width: 14%;
+    float: left;
+    position: relative;
+    padding: 20px 0 0 0;
+}
+nav#dashboardNav>ul>li a{
+    display: inline-block;
+    color: #fff;
+}
+nav#dashboardNav>ul>li:hover a{
+    border: none;
+    background: transparent;
+}
+nav#dashboardNav>ul>li a.active{
+    background: #838383;
+    color:#000;
+}
+.warning{
+    position: absolute;
+    text-align: left;
+    left: 380px ;
+    margin-top: -40px;
+    font-size: 0.7rem;
+    background:#fff;
+    color: #ddd;
+    max-width: 0;
+    overflow: hidden;
+    transition: all 1s linear;
+}
+.warning.active:before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%px;
+    left: -6px;
+    border-right: 6px solid #eb47f3;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+}
+
+.warning.active{
+    transition: all 1s linear;
+    padding: 10px;
+    color: #2a2a2a;
+    border: 2px solid #eb47f3;
+    max-width: 1000px;
+    min-width: 300px;
+    overflow: visible;
+}
+.error{
+    color: #cc0000;
+    transition: background 1s linear;
+}
+.adminManageArea{
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	height: 67vh;
+	width: 100%;
+	border-bottom: 1px solid #fbfbfb;
+}
+.adminForm form{
+	width: 20%;
+	height: 100%;
+	position: absolute;
+	right: auto;
+	top: 0;
+	margin: 0;
+	border-right: 1px solid #adadad;
+	background: #fbfbfb;
+    overflow: auto;
+}
+.adminManageArea .myContent{
+	position: absolute;
+	background: #fbfbfb;
+	overflow: auto;
+	top: 12vh;
+	top: 0;
+	right: 0;
+	width: 80%;
+	height: 100%;
+}
+.adminManageArea .myContent .tableHeader{
+	position: relative;
+	overflow: auto;
+	width: 100%;
+	background:#6d6d6d;
+	color: #fff
+}
+.adminManageArea .myContent .tableRow{
+    display: inline-block;
+    position:relative;
+    width: 100%;
+    border-bottom: 1px solid #c1c1c1;
+}
+.adminManageArea .tableCell{
+	width: 21%;
+	float: left;
+	padding: 9px 0;
+}
+.adminManageArea .tableCell:first-child{
+	width: 6% !important;
+	text-align:left;
+	padding-left: 10px;
+}
+.adminManageArea .tableCell:nth-last-child(-n+2){
+	width: 10% !important;
+	text-align: right;
+	padding-right: 10px;
+}
+.adminManageArea .myContent h2{
+	display: inline-block;
+	position: relative;
+	height: 55px;
+}
+.adminManageArea .serviceTable .tableCell{
+	width: 74%;
+}
+.adminManageArea .usersTable .tableCell{
+	width: 37%;
+}
+form#loginForm{
+    height: 300px;
+    width: 350px;
+    background: #fff;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0 0 10px #ccc;
+}
+form h2{
+    display: inline-block;
+    width: 100%;
+    background: #434343;
+    color: #fff;
+    padding: 15px;
+}
+form label{
+    display: block;
+    text-align: left;
+    margin-top: 20px;
+}
+form .purpleBtn{
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    right: auto;
+    padding: 12px;
+    display: inline-block;
+    border: none;
+    background: #0dff57;
+    color: #000;
+}
+form#loginForm .backHome{
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    left:auto;
+    right: 30px;
+    padding: 10px;
+    color: #525252;
+    background: #ccc;
+}
+.formInfo{
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+form input[type="text"],
+form input[type="password"]{
+    padding: 8px;
+    width:100%;
+    text-align: left;
+}
+#adminManagePages .myContent{
+	width: 100%;
+}
+#adminManagePages .myContent .tableCell{
+	width: 12%;
+	max-height: 50px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#adminManagePages .myContent .tableRow .tableCell:last-child>a{
+	pointer-events: none;
+	color: #ccc;
+}
+
+#pageForm {
+    width: 60%;
+    margin: auto;
+}
+
+#pageForm textarea {
+    width: 100%;
+}
+
+#updatePage {
+    display: block;
+    border: 1px solid #000;
+    width: 180px;
+    padding: 5px 20px;
+    margin: 25px auto;
+    background-color: #212121;
+    color: #fff;
+}
+
+#updatePage:hover {
+    background-color: #838383;
+}
